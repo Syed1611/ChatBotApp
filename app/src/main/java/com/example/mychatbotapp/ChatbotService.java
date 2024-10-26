@@ -49,7 +49,7 @@ public class ChatbotService {
                 Request request = new Request.Builder()
                         .url(apiUrl)
                         .post(body)
-                        .addHeader("Authorization", "Bearer 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")
+                        .addHeader("Authorization", "Bearer replace_this_with_your_huggingface_api_key")
                         .build();
 
                 try (Response response = client.newCall(request).execute()) {
