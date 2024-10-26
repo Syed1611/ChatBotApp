@@ -1,0 +1,59 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.example.mychatbotapp'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.mychatbotapp"
+        minSdk 24
+        //noinspection OldTargetApi
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "DEBUG", "true"
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "DEBUG", "false"
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+}
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.firebase.crashlytics
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation libs.appcompat.v120
+    implementation libs.retrofit
+    implementation libs.converter.gson
+    implementation libs.okhttp
+    implementation libs.timber
+    implementation(platform(libs.firebase.bom))
+    implementation(platform(libs.firebase.bom.v3223))
+    implementation(libs.google.firebase.crashlytics.ktx)
+    implementation(libs.google.firebase.analytics.ktx)
+    implementation(libs.preference.ktx)
+    implementation(libs.okhttp)
+    }

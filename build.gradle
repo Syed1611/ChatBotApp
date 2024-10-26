@@ -1,0 +1,14 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    // Do not apply any plugins here to avoid potential conflicts
+    // with plugins applied in the app-level build.gradle.kts file.
+}
+
+dependencies {
+    // Define common dependencies here if needed
+    // For example:
+    // implementation("com.jakewharton.timber:timber:5.0.1")
+    // implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
+    // implementation("com.google.firebase:firebase-crashlytics-ktx")
+    // implementation("com.google.firebase:firebase-analytics-ktx")
+}

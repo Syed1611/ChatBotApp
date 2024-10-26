@@ -1,0 +1,7 @@
+<resources>
+    <style name="ChatBubbleDark">
+        <item name="android:background">@color/gray_dark</item>  <!-- Dark background color -->
+        <item name="android:textColor">@color/white</item>       <!-- Light text color -->
+        <item name="android:padding">16dp</item>                 <!-- Padding for the bubble -->
+    </style>
+</resources>
